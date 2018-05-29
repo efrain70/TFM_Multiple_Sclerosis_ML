@@ -1,11 +1,11 @@
-\chapter{Introducci�n}
+\chapter{Introduccin}
 \label{chapter:introduccion}
 
 
 %%% SECTION
-\section{Descripci�n general del problema}
+\section{Descripcin general del problema}
 
-En la actualidad, los procesos de miner�a de datos requieren grandes cantidades de datos, que en muchas ocasiones contienen informaci�n personal y privada de usuarios o personas. Aunque se realicen procesos b�sicos de anonimizaci�n sobre los datos, es decir, eliminaci�n de los nombres u otros identificadores clave, existen multitud de t�cnicas de re-identificaci�n que permiten volver a identificar a un usuario dentro de este conjunto de datos. En la Figura \ref{fig:context-anoni1} se presenta un mapa donde es posible contextualizar los procesos de anonimizaci�n y re-identificaci�n dentro de un proceso de miner�a de datos.
+En la actualidad, los procesos de minera de datos requieren grandes cantidades de datos, que en muchas ocasiones contienen informacin personal y privada de usuarios o personas. Aunque se realicen procesos bsicos de anonimizacin sobre los datos, es decir, eliminacin de los nombres u otros identificadores clave, existen multitud de tcnicas de re-identificacin que permiten volver a identificar a un usuario dentro de este conjunto de datos. En la Figura \ref{fig:context-anoni1} se presenta un mapa donde es posible contextualizar los procesos de anonimizacin y re-identificacin dentro de un proceso de minera de datos.
 
 \begin{figure}
 	\centering
@@ -16,15 +16,15 @@ En la actualidad, los procesos de miner�a de datos requieren grandes cantidade
 
 \subsection{Ejemplo de subsection}
 
-Aunque se han realizado importantes avances en preservaci�n de la privacidad en publicaci�n de datos, tales como el modelo \textit{k}-anonymity \cite{Sweeney:2002}.
+Aunque se han realizado importantes avances en preservacin de la privacidad en publicacin de datos, tales como el modelo \textit{k}-anonymity \cite{Sweeney:2002}.
 
-Un ejemplo de pseudo-c�digo se puede encontrar en el C�digo \ref{code:RandomSwitch-1}
+Un ejemplo de pseudo-cdigo se puede encontrar en el Cdigo \ref{code:RandomSwitch-1}
 
 \begin{algorithm}
-	\caption{Pseudoc�digo del algoritmo \textit{Random Switch}}
+	\caption{Pseudocdigo del algoritmo \textit{Random Switch}}
 	\label{code:RandomSwitch-1}
 	\begin{algorithmic}
-		\REQUIRE{El grafo original $G$ y el porcentaje de anonimizaci�n $p$ que se desea aplicar.}
+		\REQUIRE{El grafo original $G$ y el porcentaje de anonimizacin $p$ que se desea aplicar.}
 		\ENSURE{El grafo $G$ anonimizado.}
 		\STATE $num = round(G.num\_edges() * p)$
 		\STATE $i = 0$
