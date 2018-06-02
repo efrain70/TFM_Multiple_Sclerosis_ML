@@ -36,12 +36,91 @@ En la tabla \ref{table:resultados} podemos ver para cada algoritmo los resultado
 
 \section{Precisión,  exhaustividad y  medida-F1}
 
-En las imágenes X, Y, Z. U extraídas de los resultados podemos ver para cada valor de las clases los valores de precisión,  exhaustividad y  la medida-F1. Estas tres medidas están relacionadas con los errores de tipo I y tipo II. 
+En las imágenes 
+\ref{figure:logall}, 
+\ref{figure:logdti}, 
+\ref{figure:svmall}, 
+\ref{figure:svmdti}, 
+\ref{figure:bayesall}, 
+\ref{figure:bayesdti},
+\ref{figure:forestall},
+\ref{figure:forestdit},
+\ref{figure:annall} y
+\ref{figure:anndti},
+ extraídas de los resultados podemos ver para cada algorimos los resultados de las dos ejecuciones: considerando todas las matrices o solamente las \gls{dti}. En cada una se puede ver para cada clase (1, 0) los valores de precisión (precision), exhaustividad (recall) y la medida-F1 (f1-score) para cada uno de las ejecuciones. Estas tres medidas están relacionadas con los errores de tipo I y tipo II. 
 
+\begin{figure}[H]
+\centering
+\fbox{\includegraphics[width=0.5\textwidth]{figs/resultados/log_all.png}}
+\caption{Resultado ejecución algoritmo Logistic Regression. Considerando todas las matrices.}
+\label{figure:logall}
+\end{figure}
 
+\begin{figure}[H]
+\centering
+\fbox{\includegraphics[width=0.5\textwidth]{figs/resultados/log_dti.png}}
+\caption{Resultado ejecución algoritmo Logistic Regression. Considerando sólo matrices \gls{dti}.}
+\label{figure:logdti}
+\end{figure}
 
-La precisión es la habilidad del clasificador etiquetar correctamente los valores dentro de su grupo. La exhaustividad en cambio es la habilidad para acertar con las etiquetas en todo el conjunto. Por ejemplo, si disponemos de 10 ejemplares de donde 3 son del tipo A y 7 son del tipo B. A través de nuestro modelo obtenemos 5 elementos del tipo A pero sólo 2 han sido correctamente etiquetados, entonces nuestra precisión sería 2/3 y la exhaustividad 2/10. La medida-F1 engloba las otras dos siendo un valor único ponderado de la precisión y la exhaustividad. Sigue la fórmula (ref). Por lo tanto, para el ejemplo anterior tendríamos un valor para la medida-F1 de X. 
+\begin{figure}[H]
+\centering
+\fbox{\includegraphics[width=0.5\textwidth]{figs/resultados/svm_all.png}}
+\caption{Resultado ejecución algoritmo Support Vector Machine. Considerando todas las matrices.}
+\label{figure:svmall}
+\end{figure}
 
+\begin{figure}[H]
+\centering
+\fbox{\includegraphics[width=0.5\textwidth]{figs/resultados/svm_dti.png}}
+\caption{Resultado ejecución algoritmo Support Vector Machine. Considerando sólo matrices \gls{dti}.}
+\label{figure:svmdti}
+\end{figure}
 
+\begin{figure}[H]
+\centering
+\fbox{\includegraphics[width=0.5\textwidth]{figs/resultados/bayes_all.png}}
+\caption{Resultado ejecución algoritmo Gaussian Naive Bayes. Considerando todas las matrices.}
+\label{figure:bayesall}
+\end{figure}
 
-En este trabajo nos hemos centrado en una mejor ``accuracy'' pero igualmente, dependiendo de la finalidad de los experimentos se pueden ajustar para que la selección de los parámetros de la configuración tuviese como meta alguno de éstos.
+\begin{figure}[H]
+\centering
+\fbox{\includegraphics[width=0.5\textwidth]{figs/resultados/bayes_dti.png}}
+\caption{Resultado ejecución algoritmo Gaussian Naive Bayes. Considerando sólo matrices \gls{dti}.}
+\label{figure:bayesdti}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\fbox{\includegraphics[width=0.5\textwidth]{figs/resultados/forest_all.png}}
+\caption{Resultado ejecución algoritmo Random Forest Classifier. Considerando todas las matrices.}
+\label{figure:forestall}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\fbox{\includegraphics[width=0.5\textwidth]{figs/resultados/forest_dti.png}}
+\caption{Resultado ejecución algoritmo Random Forest Classifier. Considerando sólo matrices \gls{dti}.}
+\label{figure:forestdit}
+
+\end{figure}
+\begin{figure}[H]
+\centering
+\fbox{\includegraphics[width=0.5\textwidth]{figs/resultados/ann_all.png}}
+\caption{Resultado ejecución algoritmo Artificial Neural Network. Considerando todas las matrices.}
+\label{figure:annall}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\fbox{\includegraphics[width=0.5\textwidth]{figs/resultados/ann_dti.png}}
+\caption{Resultado ejecución algoritmo Artificial Neural Network. Considerando sólo matrices \gls{dti}.}
+\label{figure:anndti}
+\end{figure}
+
+La precisión es la habilidad del clasificador etiquetar correctamente los valores dentro de su grupo. La exhaustividad en cambio es la habilidad para acertar con las etiquetas en todo el conjunto. Por ejemplo, si disponemos de 10 ejemplares de donde 3 son del tipo A y 7 son del tipo B. A través de nuestro modelo obtenemos 5 elementos del tipo A pero sólo 2 han sido correctamente etiquetados, entonces nuestra precisión sería 2/3 y la exhaustividad 2/10. La medida-F1 engloba las otras dos siendo un valor único ponderado de la precisión y la exhaustividad. Su valor se calcula con la siguiente fórmula: 
+
+$$F_1 = \frac{2}{\tfrac{1}{\mathrm{recall}} + \tfrac{1}{\mathrm{precision}}} = 2 \cdot \frac{\mathrm{precision} \cdot \mathrm{recall}}{\mathrm{precision} + \mathrm{recall}}$$
+
+Aunque en este trabajo nos hemos centrado en una mejor ``accuracy'' pero igualmente, dependiendo de la finalidad de los experimentos se pueden ajustar para que la selección de los parámetros de la configuración tuviese como meta alguno de éstos.

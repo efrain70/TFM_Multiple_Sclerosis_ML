@@ -16,6 +16,8 @@ La calidad de este software es clave para una correcta utilización de los datos
 
 Con este propósito, se ha desarrollado todo este software validando todo su funcionamiento a través de pruebas unitarias y de integración. Para ello se ha usado la herramienta py.test \cite{Pytest:Documentation} junto con la plataforma Coveralls \cite{CoverallsStatistics} (dirección del proyecto \url{https://coveralls.io/github/efrain70/NeuDataLoad} imagen 2) para controlar que la cobertura del código validado con estas pruebas siempre es total, 100\%.
 
+
+
 No solamente ha comprobado que el código funciona correctamente, también que su sintaxis se ajusta con los estándares del lenguaje. Para ello se ha validado el estilo de todo el código bajo la guía especial para Python PEP8 \cite{PEPPython.orgb} y para la documentación en código PEP257 \cite{PEPPython.org} y controlado la complejidad del mismo.
 
 Para ejecutar todo estas validaciones de la calidad del software en un entorno ágil, se ha  configurado el proceso siguiendo un enfoque de integración continua, usando para ello pipelines de la plataforma Travis CI \cite{TravisConfidence} (Dirección del proyecto \url{https://travis-ci.org/efrain70/NeuDataLoad}, imagen 1) como plataforma coordinada con el repositorio Github. Esto implica que cada vez que se publique alguna modificación en el código, Github se coordina con Travis CI para la ejecución de todas las pruebas anteriormente descritas reportando los posibles errores automáticamente.

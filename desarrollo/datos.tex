@@ -1,4 +1,4 @@
-A través de un convenio de cooperación entre la Universidad Oberta de Catalunya y el Institut d'investigacions Biomèdiques August Pi i Sunyer (IDIBAPS) [2], contamos con datos clínicos y de neuroimagen avanzada de personas que padecen esclerosis múltiple junto con un grupo control.
+A través de un convenio de cooperación entre la Universidad Oberta de Catalunya y el Institut d'investigacions Biomèdiques August Pi i Sunyer (IDIBAPS), contamos con datos clínicos y de neuroimagen avanzada de personas que padecen esclerosis múltiple junto con un grupo control.
 
 Como información clave para este estudio destacan las matrices simétricas de conectividad estructural. Estas matrices son el resultado del procesado de imágenes de \gls{drm}. Los índices obtenidos a través de estas técnicas, tales como las medidas del tensor, el número de fibras y el volumen de lesión pueden facilitar la obtención de medidas sensibles para diferenciar entre un paciente con un mejor o peor rendimiento cognitivo:
 
@@ -11,10 +11,26 @@ Como información clave para este estudio destacan las matrices simétricas de c
  \item [LS] Volumen lesional
 \end{description}
 
+Los pacientes presentan un peor rendimiento cognitivo principalmente en atención y memoria. Para detectar una posible discapacidad cognitiva de los pacientes hemos realizado una evaluación neuropsicológica. Esta evaluación incluye una batería (Brief Repeatable Battery, BRBN \cite{Boringa2001ThePractice}) junto con otras prueba cognitivas. Los dominios estudiados han sido los relacionados con aprendizaje y memoria. En la siguiente tabla podemos observar el número de pacientes cuya discapacidad está por debajo de puntuaciones -1 y -2 desviaciones estándares por debajo de una población de referencia (ver tabla \ref{table:totales}).
 
-(PEC3) Los pacientes presentan un peor rendimiento cognitivo principalmente en atención y memoria. Para detectar una posible discapacidad cognitiva de los pacientes hemos realizado una evaluación neuropsicológica. Esta evaluación incluye una batería (Brief Repeatable Battery, BRBN [3]) junto con otras prueba cognitivas. Los dominios estudiados han sido los relacionados con aprendizaje y memoria. En la siguiente tabla podemos observar el número de pacientes cuya discapacidad está por debajo de puntuaciones -1 y -2 desviaciones estándares por debajo de una población de referencia (ver Tabla 1).
+\begin{table}[]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+\textbf{Matriz/} & \textbf{Todos} & \textbf{HV} & \textbf{EM sim} & \textbf{Atención} & \textbf{Atención} & \textbf{Memoria} \\
+\textbf{Grupo} &  & \textbf{(Sanos)} & \textbf{problema} & \textbf{} & \textbf{y memoria} & \textbf{} \\ \hline
+\textbf{DTI\_FA}      & 140            & 42                  & 49                       & 14                & 16                          & 19               \\ \hline
+\textbf{DTI\_L1}      & 140            & 42                  & 49                       & 14                & 16                          & 19               \\ \hline
+\textbf{DTI\_MD}      & 140            & 42                  & 49                       & 14                & 16                          & 19               \\ \hline
+\textbf{DTI\_RX}      & 140            & 42                  & 49                       & 14                & 16                          & 19               \\ \hline
+\textbf{RAW}          & 211            & 42                  & 90                       & 29                & 21                          & 29               \\ \hline
+\textbf{LS}           & 169            & 0                   & 90                       & 29                & 21                          & 29               \\ \hline
+\textbf{TOTAL}        & 255            & 42                  & 101                      & 29                & 21                          & 32               \\ \hline
+\end{tabular}
+\label{table:totales}
+\caption{Tabla con la distribución según clases cognitivas}
 
-(Tabla sumas)
+\end{table}
 
 \section{Distribución de los datos}
 
@@ -37,13 +53,21 @@ Estos directorios siguen un formato establecido donde cada fichero indica en su 
 \begin{lstlisting}
 FIS/ADJACENCY_MATRICES_GRAPH/DTI_indices/FA/FIS_001_FA.csv
 \end{lstlisting}
-corresponde con la medida DTI-\gls{fa} del paciente de cuyo identificador es FIS\_001. En la tabla 2 se describe detalladamente esta estructura.
+corresponde con la medida DTI-\gls{fa} del paciente de cuyo identificador es FIS\_001. En la tabla de la imagen \ref{figure:rutas} se describe detalladamente esta estructura.
 
 Cada fichero que contiene los valores de una matriz está almacenado en formato \gls{csv} conteniendo todos ellos 76 filas y 76 columnas sin ningún valor nulo o vacío.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.74\textwidth]{figs/datos/rutas.png}
+\caption{Imagen con la tabla de los directorios de matrices y sus medidas correspondientes}
+\label{figure:rutas}
+\end{figure}
+
 
 (Tabla 2: Organización directorios)
 
 \section{Características de los datos}
-Para cada instancia que disponemos de los datos, contamos con seis matrices de adyacencia de tamaño 76x76. Aparte de estas matrices los valores de estas matrices, de la hoja de cálculo se presentan 33 columnas. Es decir, disponemos ejemplares de la muestra con hasta (TODO formula)  $76 x 76 x 6 + 33 = 34689$ atributos cada uno. 
+Para cada instancia que disponemos de los datos, contamos con seis matrices de adyacencia de tamaño 76x76. Aparte de estas matrices los valores de estas matrices, de la hoja de cálculo se presentan 33 columnas. Es decir, disponemos ejemplares de la muestra con hasta $76 x 76 x 6 + 33 = 34689$ atributos cada uno. 
 
-Los valores de las matrices son completos, es decir, si una instancia tiene una matriz, todos sus valores están presentes. Como se ve en la tabla1-TODO, no todas las instancias tienen todas sus matrices. También se encuentran X matrices ``perdidas'', sin correspondencia con ninguna instancia de la hoja de cálculo y, por lo tanto, descartadas para el estudio. 
+Los valores de las matrices son completos, es decir, si una instancia tiene una matriz, todos sus valores están presentes. Como se ve en la \ref{table:totales}, no todas las instancias tienen todas sus matrices. También se encuentran X matrices ``perdidas'', sin correspondencia con ninguna instancia de la hoja de cálculo y, por lo tanto, descartadas para el estudio. 
