@@ -23,6 +23,7 @@
 \usepackage{algorithmic}
 \usepackage{pdflscape}
 \usepackage[xindy]{glossaries} 
+\usepackage{listings}
 
 \selectlanguage{spanish}
 
@@ -117,15 +118,17 @@
 \null\vfill
 \input{./prolegomeno/prolegomeno}
 
+% DESARROLLO
+\part{Desarrollo}
+\null\vfill
+\input{./desarrollo/desarrollo}
 
-% capítulos del documento
-\input{desarrollo/resultados}
+% EPÍLOGO
+\part{Epílogo}
+\null\vfill
+\input{./epilogo/epilogo}
 
 
-% bibliografía
-\addcontentsline{toc}{chapter}{Bibliografía}
-\bibliographystyle{alphadin} % IEEEtran or alphadin??
 
-\bibliography{mendeley_v2}
 
 \end{document}
