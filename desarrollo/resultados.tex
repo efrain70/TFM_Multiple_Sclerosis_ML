@@ -1,0 +1,47 @@
+Una vez que obtenemos para cada algoritmos la mejor combinación de resultados, se ejecutan los modelos calculados con el conjunto de test y de entrenamiento inicial. De esta forma se pretende estimar el sobreajuste, ``overfitting'', del modelo. 
+
+\section{Concepto de sobreajuste}
+El sobreajuste u ``overfitting'' se produce cuando un modelo cuando obtiene muy buenos resultados bien con los datos de entrenamiento, pero su precisión es notablemente más baja con el conjunto de test. Esto se produce porque el modelo se ha adaptado a los valores del conjunto de entrenamiento y no es capaz de generalizar para datos que no ha procesado. En la imagen \ref{figure:sobreajuste} podemos observar gráficamente en que consiste este problema.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\textwidth]{figs/Overfitting.png}
+\caption{Ejemplo de sobreajuste, línea verde \cite{SobreajusteLibre}}
+\label{figure:sobreajuste}
+\end{figure}
+
+Este sobreajuste está directamente relacionado con la complejidad del modelo, cuanto más complejo sea más tendencia tendrá a sobreajustarse. Aparte, si el conjunto de datos del que disponemos es reducido, como en nuestro caso, este problema de sobreajuste estará muy presente.
+
+\section{Resumen de los resultados}
+
+En la tabla \ref{table:resultados} podemos ver para cada algoritmo los resultados obtenidos cuando se ejecuta la mejor configuración obtenida en los pasos anteriores. Entre los resultados se distinguen los valores para el conjunto de entrenamiento y para el conjunto de test. De esta forma controlamos el sobreajuste anteriormente descrito.
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{c|c|c|c|c|}
+\cline{2-5}
+                                        & \multicolumn{2}{c|}{\textbf{Todas las matrices}} & \multicolumn{2}{c|}{\textbf{Matrices de DTI}} \\ \cline{2-5} 
+                                        & \textbf{Test}          & \textbf{Train}          & \textbf{Test}         & \textbf{Train}        \\ \hline
+\multicolumn{1}{|c|}{\textbf{Logistic Regression}} & 72.73\%                & 67.69\%                 & 78.57\%               & 84.42\%               \\ \hline
+\multicolumn{1}{|c|}{\textbf{Support Vector Machine}}      & 72.73\%                & 100\%                   & 78.72\%               & 100\%                 \\ \hline
+\multicolumn{1}{|c|}{\textbf{Gaussian Naive Bayes}}    & 60.61\%                & 70.77\%                 & 78.72\%               & 86.02\%               \\ \hline
+\multicolumn{1}{|c|}{\textbf{Random Forest Classifier}}   & 72.73\%                & 96.92\%                 & 74.47                 & 93.55\%               \\ \hline
+\multicolumn{1}{|c|}{\textbf{Artificial Neural Network}}      & 65.00\%                & 70.51\%                 & 82.14                 & 82.14\%               \\ \hline
+\end{tabular}
+\caption{Tabla resumen de los resultados de los experimentos por algoritmo}
+\label{table:resultados}
+
+\end{table}
+
+\section{Precisión,  exhaustividad y  medida-F1}
+
+En las imágenes X, Y, Z. U extraídas de los resultados podemos ver para cada valor de las clases los valores de precisión,  exhaustividad y  la medida-F1. Estas tres medidas están relacionadas con los errores de tipo I y tipo II. 
+
+
+
+La precisión es la habilidad del clasificador etiquetar correctamente los valores dentro de su grupo. La exhaustividad en cambio es la habilidad para acertar con las etiquetas en todo el conjunto. Por ejemplo, si disponemos de 10 ejemplares de donde 3 son del tipo A y 7 son del tipo B. A través de nuestro modelo obtenemos 5 elementos del tipo A pero sólo 2 han sido correctamente etiquetados, entonces nuestra precisión sería 2/3 y la exhaustividad 2/10. La medida-F1 engloba las otras dos siendo un valor único ponderado de la precisión y la exhaustividad. Sigue la fórmula (ref). Por lo tanto, para el ejemplo anterior tendríamos un valor para la medida-F1 de X. 
+
+
+
+En este trabajo nos hemos centrado en una mejor ``accuracy'' pero igualmente, dependiendo de la finalidad de los experimentos se pueden ajustar para que la selección de los parámetros de la configuración tuviese como meta alguno de éstos.
