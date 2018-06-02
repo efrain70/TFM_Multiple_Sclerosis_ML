@@ -1,0 +1,34 @@
+%% portada
+\input{previos/1_portada.tex}
+
+\newpage
+\pagestyle{empty}
+\hfill
+
+%% copyright
+\input{previos/2_copyright.tex}
+
+% ficha
+\input{previos/3_ficha.tex}
+
+% dedicatoria
+\input{previos/6_dedicatoria.tex}
+
+% dedicatoria
+\input{previos/agracedimentos.tex}
+
+% resumen
+\chapter*{Resumen}
+\addcontentsline{toc}{chapter}{Resumen}
+\onehalfspacing
+
+\pagenumbering{roman} 
+\setcounter{page}{1} 
+\pagestyle{plain}
+\input{previos/4_resumen.tex}
+
+% abstract
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+\onehalfspacing
+\input{previos/5_abstract.tex}

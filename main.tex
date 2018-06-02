@@ -3,7 +3,8 @@
 \usepackage{graphicx}
 \usepackage{setspace}	%double spacing for text, single for captions, footnotes, etc.
 %\usepackage{hypernat} 	%substitut de cite que permet fer hyperlinks
-\usepackage{natbib}		% substituye a 'hypernat' que funciona en Windows.
+% \usepackage{natbib}		% substituye a 'hypernat' que funciona en Windows.
+\usepackage[square,sort,comma,numbers]{natbib}
 
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
@@ -20,6 +21,8 @@
 \usepackage{epsfig, amsmath}
 \usepackage{algorithm}
 \usepackage{algorithmic}
+\usepackage{pdflscape}
+
 
 \selectlanguage{spanish}
 
@@ -42,6 +45,8 @@
 \setlength{\evensidemargin}{0cm}
 \setlength{\headheight}{1cm}
 
+\setlength{\parskip}{1em}
+
 % indica que las 'sub-sub-sections' sean numeradas y aparezcan en el indice
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{2}
@@ -56,11 +61,8 @@
 \begin{document}
 
 % portada
-\input{0_titulo.tex}
-\newpage
-% abstract
-\input{0_resumen.tex}
-\newpage
+\input{previos/previos}
+
 
 \pagestyle{fancy}
 \renewcommand{\chaptermark}[1]{ \markboth{#1}{}}
@@ -74,11 +76,13 @@
 \phantomsection
 \addcontentsline{toc}{chapter}{Índice}
 \tableofcontents
+
 % listado de figuras
 \cleardoublepage
 \phantomsection
 \addcontentsline{toc}{chapter}{Listado de Figuras}
 \listoffigures
+
 % listado de tablas
 \cleardoublepage
 \phantomsection
@@ -98,12 +102,20 @@
 
 \onehalfspacing
 
-% capitulos del documento
-\input{1_introduccion.tex}
+% PROLEGÓMENO
+\part{Prolegómeno}
+\null\vfill
+\input{./prolegomeno/prolegomeno}
 
-% bibliografia
+
+% capítulos del documento
+\input{desarrollo/resultados}
+
+
+% bibliografía
 \addcontentsline{toc}{chapter}{Bibliografía}
-\bibliographystyle{plain}
-\bibliography{referencias}
+\bibliographystyle{alphadin} % IEEEtran or alphadin??
+
+\bibliography{mendeley_v2}
 
 \end{document}
