@@ -22,7 +22,7 @@
 \usepackage{algorithm}
 \usepackage{algorithmic}
 \usepackage{pdflscape}
-
+\usepackage[xindy]{glossaries} 
 
 \selectlanguage{spanish}
 
@@ -54,6 +54,13 @@
 % settings for code
 \renewcommand{\algorithmicrequire}{\textbf{Entrada: }}
 \renewcommand{\algorithmicensure}{\textbf{Salida: }}
+
+% glosario
+\makeglossaries
+
+% glossary
+\input{accronimos}
+\makeglossaries
 
 %%%%%%%%%%%%
 % DOCUMENT %
@@ -88,6 +95,9 @@
 \phantomsection
 \addcontentsline{toc}{chapter}{Listado de Tablas}
 \listoftables
+
+% Acronyms
+\printglossary[title=Acrónimos, type=\acronymtype]
 
 \thispagestyle{empty}
 
