@@ -66,6 +66,23 @@ Cada algoritmo tiene su propio conjunto de parámetros que lo configuran. A su v
 
 Dado el número de combinaciones posibles entre los parámetros de cada modelo, la búsqueda exhaustiva de todos ellos tiene un coste inasumible para este trabajo. A través de una selección aleatoria de combinaciones usando la utilidad de scikit-learn ``Randomized Parameter Optimization'' obtenemos una aproximación al modelo óptimo y a la configuración de los pasos previos.
 
+Aunque los rangos para estas combinaciones no siempre es fácil de estimar, usando herramientas gráficas se ha observado en algunos casos con qué combinación se podrían comportar los algoritmos mejor. Las imágenes \ref{figure:forest3d}, y \ref{figure:ann3d} muestran tres gráficas usadas para conocer las zonas donde las combinaciones de dos parámetros devuelven mejores resultados para los algoritmos  Random Forest Classifier y Artificial Neural Network respectivamente.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.74\textwidth]{figs/forest_3d.png}
+\caption{Gráfica para la selección de parámetros en  Random Forest Classifier}
+\label{figure:forest3d}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.74\textwidth]{figs/ann_3d.png}
+\caption{Gráfica para la selección de parámetros en  Artificial Neural Network}
+\label{figure:ann3d}
+\end{figure}
+
+
 \section{Validación de los modelos}
 \label{section:validacion}
 Tanto para comparar los posibles modelos obtenidos durante la selección de parámetros y atributos y para validar el modelo seleccionado para compararlo con otros se usa la implementación en scikit-learn de la técnica validación \gls{kfold} estratificada (Stratified \gls{kfold}). La estratificación es muy importante para los algoritmos de clasificación con muestras con pocos ejemplares para conservar el porcentaje de elementos de cada clase en los conjuntos.
