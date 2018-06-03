@@ -11,7 +11,7 @@ Como información clave para este estudio destacan las matrices simétricas de c
  \item [LS] Volumen lesional
 \end{description}
 
-Los pacientes presentan un peor rendimiento cognitivo principalmente en atención y memoria. Para detectar una posible discapacidad cognitiva de los pacientes hemos realizado una evaluación neuropsicológica. Esta evaluación incluye una batería (Brief Repeatable Battery, BRBN \cite{Boringa2001ThePractice}) junto con otras prueba cognitivas. Los dominios estudiados han sido los relacionados con aprendizaje y memoria. En la siguiente tabla podemos observar el número de pacientes cuya discapacidad está por debajo de puntuaciones -1 y -2 desviaciones estándares por debajo de una población de referencia (ver tabla \ref{table:totales}).
+Los pacientes presentan un peor rendimiento cognitivo principalmente en atención y memoria. Para detectar una posible discapacidad cognitiva de los pacientes hemos realizado una evaluación neuropsicológica. Esta evaluación incluye una batería (Brief Repeatable Battery, BRBN \cite{Boringa2001ThePractice}) junto con otras prueba cognitivas. Los dominios estudiados han sido los relacionados con aprendizaje y memoria. En la siguiente tabla podemos observar el número de pacientes cuya discapacidad está por debajo de puntuaciones -1 y -2 desviaciones estándares de una población de referencia (ver tabla \ref{table:totales}).
 
 \begin{table}[h]
 \centering
@@ -33,6 +33,7 @@ Los pacientes presentan un peor rendimiento cognitivo principalmente en atenció
 \end{table}
 
 \section{Distribución de los datos}
+\label{section:distdatos}
 
 La información proveída por el grupo de Imagen Avanzada en enfermedades Neuroinmunológicas (ImaginEM) \cite{QueNeuroinmunologia} se encuentra organizada en una hoja de cálculo donde se presentan los datos clínicos de cada paciente anonimizado y una estructura en forma de distintos directorios donde se presentan cada matriz de adyacencia.
 
@@ -59,15 +60,12 @@ Cada fichero que contiene los valores de una matriz está almacenado en formato 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.74\textwidth]{figs/datos/rutas.png}
+\includegraphics[width=1\textwidth]{figs/datos/rutas.png}
 \caption{Imagen con la tabla de los directorios de matrices y sus medidas correspondientes}
 \label{figure:rutas}
 \end{figure}
 
-
-(Tabla 2: Organización directorios)
-
 \section{Características de los datos}
-Para cada instancia que disponemos de los datos, contamos con seis matrices de adyacencia de tamaño 76x76. Aparte de estas matrices los valores de estas matrices, de la hoja de cálculo se presentan 33 columnas. Es decir, disponemos ejemplares de la muestra con hasta $76 x 76 x 6 + 33 = 34689$ atributos cada uno. 
+Para cada instancia que disponemos de los datos, contamos con seis matrices de adyacencia de tamaño $76 x 76$. Aparte de estas matrices los valores de estas matrices, de la hoja de cálculo se presentan 33 columnas. Es decir, disponemos ejemplares de la muestra con hasta $76 x 76 x 6 + 33 = 34689$ atributos cada uno. 
 
-Los valores de las matrices son completos, es decir, si una instancia tiene una matriz, todos sus valores están presentes. Como se ve en la \ref{table:totales}, no todas las instancias tienen todas sus matrices. También se encuentran X matrices ``perdidas'', sin correspondencia con ninguna instancia de la hoja de cálculo y, por lo tanto, descartadas para el estudio. 
+Los valores de las matrices son completos, es decir, si una instancia tiene una matriz, todos sus valores están presentes. Como se ve en la tabla \ref{table:totales}, no todas las instancias tienen todas sus matrices. Por otra parte, también se encuentran 40 matrices ``perdidas'', sin correspondencia con ninguna instancia de la hoja de cálculo y, por lo tanto, descartadas para el estudio. 

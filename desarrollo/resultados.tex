@@ -2,7 +2,7 @@ Una vez que obtenemos para cada algoritmos la mejor combinación de resultados, 
 
 \section{Concepto de sobreajuste}
 \label{section:sobreajuste}
-El sobreajuste u ``overfitting'' se produce cuando un modelo cuando obtiene muy buenos resultados bien con los datos de entrenamiento, pero su precisión es notablemente más baja con el conjunto de test. Esto se produce porque el modelo se ha adaptado a los valores del conjunto de entrenamiento y no es capaz de generalizar para datos que no ha procesado. En la imagen \ref{figure:sobreajuste} podemos observar gráficamente en que consiste este problema.
+El sobreajuste u ``overfitting'' se produce cuando un modelo cuando obtiene muy buenos resultados  con los datos de entrenamiento, pero su precisión es notablemente más baja con el conjunto de test. Esto se produce porque el modelo se ha adaptado a los valores del conjunto de entrenamiento y no es capaz de generalizar para datos que no ha procesado. En la imagen \ref{figure:sobreajuste} podemos observar gráficamente en que consiste este problema.
 
 \begin{figure}[H]
 \centering
@@ -11,7 +11,7 @@ El sobreajuste u ``overfitting'' se produce cuando un modelo cuando obtiene muy 
 \label{figure:sobreajuste}
 \end{figure}
 
-Este sobreajuste está directamente relacionado con la complejidad del modelo, cuanto más complejo sea más tendencia tendrá a sobreajustarse. Aparte, si el conjunto de datos del que disponemos es reducido, como en nuestro caso, este problema de sobreajuste estará muy presente.
+Este sobreajuste está directamente relacionado con la complejidad del modelo, cuanto más complejo sea más tendencia tendrá a sobreajustarse. Además, si el conjunto de datos del que disponemos es reducido, como en nuestro caso, este problema de sobreajuste estará muy presente.
 
 \section{Resumen de los resultados}
 
@@ -48,7 +48,7 @@ En las imágenes
 \ref{figure:forestdit},
 \ref{figure:annall} y
 \ref{figure:anndti},
- extraídas de los resultados podemos ver para cada algorimos los resultados de las dos ejecuciones: considerando todas las matrices o solamente las \gls{dti}. En cada una se puede ver para cada clase (1, 0) los valores de precisión (precision), exhaustividad (recall) y la medida-F1 (f1-score) para cada uno de las ejecuciones. Estas tres medidas están relacionadas con los errores de tipo I y tipo II. 
+ extraídas de los resultados podemos ver para cada algoritmo los resultados de las dos ejecuciones: considerando todas las matrices o solamente las \gls{dti}. Se diferencian para cada clase (1, 0) los valores de precisión (precision), exhaustividad (recall) y la medida-F1 (f1-score) de cada ejecución. Estas tres medidas están relacionadas con los errores de tipo I y tipo II. 
 
 \begin{figure}[H]
 \centering
@@ -124,4 +124,4 @@ La precisión es la habilidad del clasificador etiquetar correctamente los valor
 
 $$F_1 = \frac{2}{\tfrac{1}{\mathrm{recall}} + \tfrac{1}{\mathrm{precision}}} = 2 \cdot \frac{\mathrm{precision} \cdot \mathrm{recall}}{\mathrm{precision} + \mathrm{recall}}$$
 
-Aunque en este trabajo nos hemos centrado en una mejor ``accuracy'' pero igualmente, dependiendo de la finalidad de los experimentos se pueden ajustar para que la selección de los parámetros de la configuración tuviese como meta alguno de éstos.
+Aunque en este trabajo nos hemos centrado en la medida de exactitud (``accuracy''). Dependiendo de la finalidad de los experimentos se pueden ajustar para que la selección de los parámetros de la configuración tuviese como meta alguno de éstos.
