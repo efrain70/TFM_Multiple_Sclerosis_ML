@@ -1,4 +1,4 @@
-En este trabajo nos hemos centrado principalmente en la aplicación de algoritmos de clasificación de aprendizaje supervisado para las etiquetas relacionadas con las disfunciones cognitivas presentes en los datos proporcionados. Los experimentos que se ha llevado persiguen el objetivo de obtener el mejor modelo para cada algoritmos a partir de un conjunto de datos usados para su entrenamiento.
+En este trabajo nos hemos centrado principalmente en la aplicación de algoritmos de clasificación de aprendizaje supervisado para las etiquetas relacionadas con las disfunciones cognitivas presentes en los datos proporcionados. Los experimentos que se han llevado a cabo persiguen el objetivo de obtener el mejor modelo para cada algoritmos a partir de un conjunto de datos usados para su entrenamiento.
 
 \section{Obtención de los modelos}
 
@@ -64,9 +64,13 @@ En este trabajo nos encontramos con unos datos con muy alta dimensionalidad. Sin
 
 Cada algoritmo tiene su propio conjunto de parámetros que lo configuran. A su vez, a cada uno se le pueden aplicar un conjunto de atributos pudiéndose obtener resultados muy diversos. Igualmente, cada paso en el preprocesado de los datos explicado con anterioridad tiene sus propios parámetros. Todo esto hace que la elección del modelo óptimo para un algoritmo establecido no es un problema trivial.
 
-Dado el número de combinaciones posibles entre los parámetros de cada modelo, la búsqueda exhaustiva de todos ellos tiene un coste inasumible para este trabajo. A través de una selección aleatoria de combinaciones usando la utilidad de scikit-learn ``Randomized Parameter Optimization'' obtenemos una aproximación al modelo óptimo y a la configuración de los pasos previos.
+Dado el número de combinaciones posibles entre los parámetros de cada modelo, la búsqueda exhaustiva de todos ellos tiene un coste inasumible para este trabajo. A través de una selección aleatoria de combinaciones usando la utilidad de scikit-learn ``Randomized Parameter Optimization'' obtenemos una aproximación del modelo óptimo y de la configuración de los pasos previos.
 
-Aunque los rangos para estas combinaciones no siempre es fácil de estimar, usando herramientas gráficas se ha observado en algunos casos con qué combinación se podrían comportar los algoritmos mejor. Las imágenes \ref{figure:forest3d}, y \ref{figure:ann3d} muestran tres gráficas usadas para conocer las zonas donde las combinaciones de dos parámetros devuelven mejores resultados para los algoritmos  Random Forest Classifier y Artificial Neural Network respectivamente.
+Aunque los rangos para estas combinaciones no siempre son fáciles de estimar, el uso de herramientas gráficas ha proporcionado la respuesta de la mejor combinación que el algoritmo pueda utilizar.
+
+
+
+Aunque los rangos para estas combinaciones no siempre son fáciles de estimar, el uso de herramientas gráficas ha proporcionado la respuesta de la mejor combinación que el algoritmo pueda utilizar. Las imágenes \ref{figure:forest3d}, y \ref{figure:ann3d} muestran tres gráficas usadas para conocer las zonas donde las combinaciones de dos parámetros devuelven mejores resultados para los algoritmos  Random Forest Classifier y Artificial Neural Network respectivamente.
 
 \begin{figure}[H]
 \centering
